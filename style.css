@@ -67,8 +67,6 @@ li {
   list-style: none;
 }
 
-
-
 nav h2 span {
   color: #fd6e0a;
 }
@@ -417,4 +415,386 @@ width: 461px;
   padding: 18px 40px;
   width: 150px;
 height: 64px;
+}
+
+
+/* ai code */
+
+
+/* =========================
+   Hover + Animation
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+button,
+.card,
+.galery img,
+.contact-icon img {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #fd6e0a;
+}
+
+.common-btn-style:hover {
+  background-color: #e85d00;
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(253, 110, 10, 0.3);
+}
+
+.contact-btn button:hover {
+  background-color: #fd6e0a;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.contact-btn button:hover svg path {
+  stroke: white;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.galery div {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.galery img:hover {
+  transform: scale(1.12);
+}
+
+.contact-icon img:hover {
+  transform: translateY(-5px) scale(1.15);
+  cursor: pointer;
+}
+
+.message-section input:focus,
+.message-section textarea:focus {
+  outline: 2px solid #fd6e0a;
+}
+
+.banner .left-side {
+  animation: slideLeft 1s ease forwards;
+}
+
+.banner .right-side {
+  animation: slideRight 1s ease forwards;
+}
+
+.card {
+  animation: cardUp 0.8s ease forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Tablet Responsive
+========================= */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .right-side {
+    width: 500px;
+  }
+
+  .thumb-image img {
+    height: 580px;
+  }
+
+  .thumb-background img {
+    height: 450px;
+    right: -50px;
+  }
+
+  .left-side .text-two {
+    font-size: 65px;
+  }
+
+  .card-section {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-section .card {
+    width: 45%;
+  }
+
+  .my-resume .info {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero-section {
+    margin-bottom: 70px;
+  }
+
+  header {
+    padding-bottom: 70px;
+  }
+
+  header nav {
+    padding-top: 25px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul li button {
+    width: 120px;
+    height: 50px;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .left-side .text-one {
+    font-size: 30px;
+  }
+
+  .left-side .text-two {
+    font-size: 48px;
+  }
+
+  .left-side .text-three {
+    font-size: 16px;
+  }
+
+  .btn {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .download-btn button,
+  .contact-btn button {
+    width: 150px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .right-side {
+    width: 100%;
+    height: 430px;
+  }
+
+  .thumb-image img {
+    height: 430px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .thumb-background img {
+    height: 330px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .about {
+    height: auto;
+    padding: 60px 25px;
+  }
+
+  .about-wrap {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-discription {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .what-i-do,
+  .summary,
+  .amazing {
+    margin-bottom: 70px;
+  }
+
+  .what-i-do {
+    margin-top: 70px;
+  }
+
+  .discription p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .card-section {
+    flex-direction: column;
+  }
+
+  .card-section .card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .my-resume {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .education-section,
+  .experience-section {
+    width: 100%;
+  }
+
+  .summary-title h2 {
+    margin-bottom: 60px;
+  }
+
+  .my-resume .info {
+    width: 100%;
+  }
+
+  .galery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    gap: 60px;
+    padding: 70px 0;
+  }
+
+  .contact-text p {
+    font-size: 16px;
+  }
+
+  .message-section,
+  .message-section form {
+    width: 100%;
+  }
+
+  .message-section input,
+  .message-section textarea {
+    width: 100%;
+  }
+}
+
+/* ছোট মোবাইল */
+@media screen and (max-width: 480px) {
+  .left-side .text-two {
+    font-size: 38px;
+  }
+
+  .btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-btn button,
+  .contact-btn button {
+    width: 200px;
+  }
+
+  nav ul {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .right-side {
+    height: 350px;
+  }
+
+  .thumb-image img {
+    height: 350px;
+  }
+
+  .thumb-background img {
+    height: 270px;
+  }
+
+  .about-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .summary-title h3 {
+    font-size: 21px;
+  }
+
+  .education-title,
+  .experience-title {
+    font-size: 26px;
+  }
 }
