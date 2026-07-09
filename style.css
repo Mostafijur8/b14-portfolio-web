@@ -23,6 +23,13 @@
   border: none;
 }
 
+/* common style h2 */
+h2{
+font-weight: 700;
+font-size: 35px;
+color: #181818;
+}
+
 /* hero-section style start */
 .hero-section {
   background-color: #fff8f3;
@@ -60,10 +67,7 @@ li {
   list-style: none;
 }
 
-nav h2 {
-  font-weight: 800;
-  font-size: 45px;
-}
+
 
 nav h2 span {
   color: #fd6e0a;
